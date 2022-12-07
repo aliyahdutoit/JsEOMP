@@ -12,14 +12,14 @@ JSON.parse(localStorage.getItem('.container ')) : [
                "name": "Verity",
                "author": "Colleen Hoover",
                "price": "£20",
-              Image = URL
+              "image":  URL={""}
            },
             {
                "id": "2",
                "name": "If We Were Villains",
                "author": "M. L. Rio",
                "price": "£15"
-               "image" = URL={https://i.postimg.cc/nzhYNxs1/if-we-were-villains.jpg}
+               "image": URL={"https://i.postimg.cc/nzhYNxs1/if-we-were-villains.jpg"}
            },
             {
                "id": "3",
@@ -38,7 +38,7 @@ JSON.parse(localStorage.getItem('.container ')) : [
                "name": "The Song of Achilles",
                "author": "Madeline Miller",
                "price": "£19",
-               "image" = URL={https://i.postimg.cc/xCmTfJbj/TSOA.jpg}
+               "image": URL={"https://i.postimg.cc/xCmTfJbj/TSOA.jpg"}
            },
             {
                "id": "6",
@@ -81,7 +81,7 @@ JSON.parse(localStorage.getItem('.container ')) : [
                "name": "Six of Crows",
                "author": "Leigh Bardugo",
                "price": "£24",
-               "image" = URL={https://i.postimg.cc/Nf39RtBz/6OC.jpg}
+               "image": URL={"https://i.postimg.cc/Nf39RtBz/6OC.jpg"}
            },    
             {
                "id": "13",
@@ -109,11 +109,7 @@ async function display() {
     let books = await fetchData();
     return books;
 }
-// fetch('https://api.chucknorris.io/jokes/random')
-// .then((res)=>{
-//     return res.json();
-// })
-.then((data)=>{
+.then((card)=>{
     let card = document.querySelector('card');
     Object.keys(books).forEach( (card)=>{
         if(books[card].length){
