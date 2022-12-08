@@ -19,6 +19,7 @@ body {
 body {
     background-color: #100e17;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 300px;
   }
   
   .container {
@@ -28,12 +29,13 @@ body {
     top: 60px;
     left: calc(50% - 300px);
     display: flex;
+    padding-top: 160px;
   }
   
   .card {
     display: flex;
     height: 280px;
-    width: 200px;
+    width: 1000px;
     background-color: #17141d;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;

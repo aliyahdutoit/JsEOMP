@@ -23,10 +23,10 @@ body {
   
   .container {
     position: absolute;
-    height: 300px;
-    width: 600px;
+    height: 0px;
+    width: 0px;
     top: 60px;
-    left: calc(50% - 300px);
+    /* left: calc(50% - 300px); */
     display: flex;
   }
   
@@ -43,10 +43,10 @@ body {
     left: 0px;
   }
   
-  .card:not(:first-child) {
+  /* .card:not(:first-child) {
       margin-left: -50px;
   }
-  
+   */
   .card:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;

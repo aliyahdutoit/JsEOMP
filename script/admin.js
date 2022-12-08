@@ -1,9 +1,3 @@
-// DOMM MANIPULATION //
-const body = document.body
-
-// local storage //
-
-
 let books = JSON.parse(localStorage.getItem('books ')) ?
 JSON.parse(localStorage.getItem('books')) : [
             {
@@ -107,38 +101,20 @@ console.log(x);
 
 x.forEach(aliyah => {
     console.log('Title: ' + aliyah.title)
-    document.querySelector(".card").innerHTML += 
+    document.querySelector("table").innerHTML += 
     `
-        
-    <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="${aliyah.image}" class="img-fluid rounded-start" alt="..." >
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">${aliyah.title}</h5>
-          <p class="card-text">R price</p>
-          <p class="card-text">book quote</p>
-          <p class="card-text"><small class="text-muted">author</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <tr>
+
+    <td>${aliyah.id}</td>
+    <td>${aliyah.title}</td>
+    <td>${aliyah.author}</td>
+    <td>${aliyah.price}</td>
+    <td><button>edit</button></td>
+    <td><button>delete</button></td>
+   
+</tr>
+    
             
     `
-    console.log(aliyah);
+    console.table(aliyah);
 });
-
-// for (const aliyah in books)  {
-//     if (books.hasOwnProperty.call(books, aliyah)) {
-//         const element = books[aliyah];
-//         document.querySelector(".card").innerHTML += 
-//         `
-        
-//         <h3>${books.title}</h3>
-        
-//         `
-//     }
-// }
-
