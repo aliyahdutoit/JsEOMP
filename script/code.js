@@ -1,5 +1,4 @@
-// DOMM MANIPULATION //
-const body = document.body
+
 
 // local storage //
 
@@ -39,7 +38,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Donna Tartt",
                quote: "It's a very Greek idea, and a very profound one. Beauty is terror. Whatever we call beautiful, we quiver before it. And what could be more terrifying and beautiful, to souls like the Greeks or our own, than to lose control completely?",
                price: 18,
-               genre: "Dark Academia"
+               genre: "Dark Academia",
                image: "https://i.postimg.cc/nrf7LdmP/the-secret-history.jpg"
            },
             {
@@ -48,7 +47,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Madeline Miller",
                price: 19,
                quote: "I am made of memories.",
-               genre: "Greek Mythology"
+               genre: "Greek Mythology",
                image: "https://i.postimg.cc/xCmTfJbj/TSOA.jpg"
            },
             {
@@ -150,11 +149,10 @@ x.forEach(aliyah => {
     console.log('Title: ' + aliyah.title)
     document.querySelector(".card").innerHTML += 
     `
-        
     <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="${aliyah.image}" class="img-fluid rounded-start" alt="..." >
+        <img src="${aliyah.image}" class="img-fluid rounded-start" alt="..." id="image">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -168,7 +166,7 @@ x.forEach(aliyah => {
         </div>
       </div>
     </div>
-  </div>
+    </div>
             
     `
     console.log(aliyah);
@@ -186,3 +184,22 @@ x.forEach(aliyah => {
 //     }
 // }
 
+
+{/* <div class="card mb-3" style="max-width: 540px;">
+<div class="row g-0">
+  <div class="col-md-4">
+    <img src="${aliyah.image}" class="img-fluid rounded-start" alt="..." >
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title">${aliyah.title}</h5>
+      <p class="card-text"><small class="text-muted">${aliyah.genre}</small></p>
+      <p class="card-text">£${aliyah.price}</p>
+      <p class="card-text">"${aliyah.quote}"</p>
+      <p class="card-text"><small class="text-muted">by ${aliyah.author}</small>
+      <button>add to checkout</button></p>
+     
+    </div>
+  </div>
+</div>
+</div> */}

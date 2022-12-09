@@ -123,7 +123,9 @@ x.forEach(aliyah => {
     <td>${aliyah.author}</td>
     <td>${aliyah.genre}</td>
     <td>${aliyah.price}</td>
-    <td><button>edit</button><button>delete</button></td>
+    <td><button id="edit">edit</button>
+    <button id="delete">delete</button></td>
+    
     
    
 </tr>

@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 body {
     background-image: url(/assets/home-bg.png);
@@ -18,15 +19,22 @@ body {
 
 th {
     color: aliceblue;
-    padding-left: 10px;
 }
 
 table {
     justify-content: space-around;
     color: wheat;
-    margin-left: 285px;
+    /* margin-left: 285px; */
+    border: 20px;
+    column-gap: 20px;
+    border-collapse: separate;
+    border-spacing: 0px;
+    
 }
 
+table :hover {
+    color: aliceblue;
+}
 tbody {
-    padding-left: 30px;
+    color: aliceblue;
 }

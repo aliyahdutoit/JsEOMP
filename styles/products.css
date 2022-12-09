@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 body {
     background-image: url(/assets/pp.jpg);
@@ -15,38 +16,50 @@ body {
 
 }
 
-/* card */
-body {
-    background-color: #100e17;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 300px;
-  }
-  
-  .container {
+.card{
+  flex-direction: unset;
+  background-color: beige;
+  width: 1082px;
+  justify-content: center;
+}
+
+#image {
+  min-height: fit-content;
+}
+
+/* #card-card{
+  padding-right: 10px;
+  background-color: grey;
+} */
+
+
+
+card 
+
+ .container {
     position: absolute;
     height: 300px;
-    max-width: 600px;
+
     top: 60px;
     left: calc(50% - 300px);
     display: flex;
     padding-top: 160px;
+    max-width: 1040px !important;
+    width: 90% !important;
   }
   
-  .card {
-    display: flex;
-    height: 280px;
-    width: 1000px;
+    .card {
     background-color: #17141d;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
-  /*   margin-left: -50px; */
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
-  }
+    background: transparent;
+  } 
   
   
-  
+
   .card:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
