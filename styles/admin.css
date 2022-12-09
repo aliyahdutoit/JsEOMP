@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    
 }
 
 #logo {
@@ -17,8 +18,15 @@ body {
 
 th {
     color: aliceblue;
+    padding-left: 10px;
 }
 
 table {
-    
+    justify-content: space-around;
+    color: wheat;
+    margin-left: 285px;
+}
+
+tbody {
+    padding-left: 30px;
 }

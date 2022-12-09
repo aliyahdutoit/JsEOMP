@@ -40,31 +40,10 @@
     </nav>
 
     <h2>Admin Page</h2>
-    <!-- Trigger the modal with a button
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addStuff">Open Modal</button>
-
-<!-- Modal -->
-<!-- <div class="modal" tabindex="-1" id="addStuff">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> --> -->
-
+  
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+  Add New Book
 </button>
 
 <!-- Modal -->
@@ -72,7 +51,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Book Bound Admin</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -83,13 +62,13 @@
               <div class="col">
                 <div class="form-outline">
                   <input type="text" id="form6Example1" class="form-control" />
-                  <label class="form-label" for="form6Example1">First name</label>
+                  <label class="form-label" for="form6Example1">ID #</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form6Example2" class="form-control" />
-                  <label class="form-label" for="form6Example2">Last name</label>
+                  <input type="number" id="form6Example2" class="form-control" />
+                  <label class="form-label" for="form6Example2">Price</label>
                 </div>
               </div>
             </div>
@@ -97,31 +76,31 @@
             <!-- Text input -->
             <div class="form-outline mb-4">
               <input type="text" id="form6Example3" class="form-control" />
-              <label class="form-label" for="form6Example3">Company name</label>
+              <label class="form-label" for="form6Example3">Title</label>
             </div>
           
             <!-- Text input -->
             <div class="form-outline mb-4">
               <input type="text" id="form6Example4" class="form-control" />
-              <label class="form-label" for="form6Example4">Address</label>
+              <label class="form-label" for="form6Example4">Author</label>
             </div>
           
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="form6Example5" class="form-control" />
-              <label class="form-label" for="form6Example5">Email</label>
+              <label class="form-label" for="form6Example5">Genre</label>
             </div>
           
             <!-- Number input -->
             <div class="form-outline mb-4">
               <input type="number" id="form6Example6" class="form-control" />
-              <label class="form-label" for="form6Example6">Phone</label>
+              <label class="form-label" for="form6Example6">Image Link</label>
             </div>
           
             <!-- Message input -->
             <div class="form-outline mb-4">
               <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-              <label class="form-label" for="form6Example7">Additional information</label>
+              <label class="form-label" for="form6Example7">Book Quote</label>
             </div>
           
             <!-- Checkbox -->
@@ -148,8 +127,8 @@
                 <th>ID #</th>
                 <th>Book name</th>
                <th>Author</th>
+               <th>Genre</th>
                  <th>Price</th>
-               <th>Amount</th>
                <th>Edit</th>
         </thead>
        <tbody>

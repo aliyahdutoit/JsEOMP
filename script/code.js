@@ -12,6 +12,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Colleen Hoover",
                price: 20,
                quote: "It's clear that Verity was a master at manipulating the truth. The only question that remains is: Which truth was she manipulating?",
+               genre: "Thriller",
               image: "https://i.postimg.cc/bJV8YHgn/verity.jpg"
            },
             {
@@ -20,6 +21,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "M. L. Rio",
                price : 15,
                quote: "You can justify anything if you do it poetically enough.",
+               genre: "Dark Academia",
                image: "https://i.postimg.cc/15mVsXdS/if-we-were-villains.jpg"
            },
             {
@@ -28,6 +30,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Oscar Wilde",
                quote: "Experience is merely the name men gave to their mistakes.",
                price: 25,
+               genre: "Dark Academia",
                image: "https://i.postimg.cc/SxLBxFf8/the-picture-of-dorian-gray.jpg"
            },
             {
@@ -36,6 +39,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Donna Tartt",
                quote: "It's a very Greek idea, and a very profound one. Beauty is terror. Whatever we call beautiful, we quiver before it. And what could be more terrifying and beautiful, to souls like the Greeks or our own, than to lose control completely?",
                price: 18,
+               genre: "Dark Academia"
                image: "https://i.postimg.cc/nrf7LdmP/the-secret-history.jpg"
            },
             {
@@ -44,6 +48,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Madeline Miller",
                price: 19,
                quote: "I am made of memories.",
+               genre: "Greek Mythology"
                image: "https://i.postimg.cc/xCmTfJbj/TSOA.jpg"
            },
             {
@@ -52,6 +57,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Charlotte Brontë",
                quote: "If all the world hated you and believed you wicked, while your own conscience approved of you and absolved you from guilt, you would not be without friends.",
                price: 22,
+               genre: "Classic",
                image: "https://i.postimg.cc/QMX2z8WC/jane-eyre.jpg"
            },
             {
@@ -60,6 +66,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: " Louisa May Alcott",
                quote: "Jo’s eyes sparkled, for it’s always pleasant to be believed in, and a friend’s praise is always sweeter than a dozen newspaper puffs.",
                price: 22,
+               genre: "Classic",
                image: "https://i.postimg.cc/1t9NFgX9/littlle-women.jpg"
            },
             {
@@ -68,6 +75,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Taherah Mafi",
                quote: "I Grieve Nothing. I Take Everything: IGNITE, my love.",
                price: 16,
+               genre: "Dystopian",
                image: "https://i.postimg.cc/Pq6L87QV/shatter-mme.jpg"
            },
             {
@@ -76,6 +84,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Jennifer L. Barnes",
                quote: "On the contrary, Heiress, bleeding is a devastatingly good look for me.",
                price: 17,
+               genre: "Mystery",
                image: "https://i.postimg.cc/mknGGYRr/the-inheritance-games.jpg"
            },
             {
@@ -84,6 +93,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Penelope Douglas",
                quote: "Because pain in the body quiets the pain in the head. It feels good, like a kill switch for the brain.",
                price: 27,
+               genre: "Romance",
                image: "https://i.postimg.cc/P599rXBS/killswitch.jpg"
            },
             {
@@ -92,6 +102,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Dannielle Lori",
                quote: "Haven't you heard? Love is an obsession. Some would even say... The Maddest Obsession.",
                price: 23,
+               genre: "Romance",
                image: "https://i.postimg.cc/269LZtr8/the-maddest-obsession.jpg"
            },
             {
@@ -99,6 +110,7 @@ JSON.parse(localStorage.getItem('books')) : [
                title: "Six of Crows",
                author: "Leigh Bardugo",
                price: 24,
+               genre: "Fantasy",
                quote: "No mourners, No funerals.",
                image: "https://i.postimg.cc/Nf39RtBz/6OC.jpg"
            },    
@@ -108,6 +120,7 @@ JSON.parse(localStorage.getItem('books')) : [
               author: "V.E.Schwab",
                 quote: "Qu'est-ce qu'une personne, sinon les traces qu'elle laisse derrière elle?",
                price: 30,
+               genre: "Fiction",
                image: "https://i.postimg.cc/zGMJT1RQ/la-vie-invisible-d-addie-larue.jpg"
            },    
             {
@@ -116,6 +129,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Markus Zusak",
                quote: "Like most misery, it started with apparent happiness.",
                price: 28,
+               genre: "Classic",
                image: "https://i.postimg.cc/RF08VWgJ/the-book-thief.jpg"
            },    
             {
@@ -124,6 +138,7 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Olivie Blake",
                quote: "They were binary stars, trapped in each other’s gravitational field and easily diminished without the other’s opposing force.",
                price: 35,
+               genre: "Dark Academia",
                image: "https://i.postimg.cc/mk3bfdVy/the-atlas-six.jpg"
            } 
 ];
@@ -144,9 +159,11 @@ x.forEach(aliyah => {
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">${aliyah.title}</h5>
+          <p class="card-text"><small class="text-muted">${aliyah.genre}</small></p>
           <p class="card-text">£${aliyah.price}</p>
           <p class="card-text">"${aliyah.quote}"</p>
-          <p class="card-text"><small class="text-muted">by ${aliyah.author}</small><button>add to checkout</button></p>
+          <p class="card-text"><small class="text-muted">by ${aliyah.author}</small>
+          <button>add to checkout</button></p>
          
         </div>
       </div>

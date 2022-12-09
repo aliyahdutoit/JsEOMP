@@ -5,6 +5,7 @@ JSON.parse(localStorage.getItem('books')) : [
                title: "Verity",
                author: "Colleen Hoover",
                price: 20,
+               genre: "Thriller",
               image: "https://i.postimg.cc/DZmWKXNY/6-of-crows.jpg"
            },
             {
@@ -12,87 +13,99 @@ JSON.parse(localStorage.getItem('books')) : [
                title: "If We Were Villains",
                author: "M. L. Rio",
                price : 15,
+               genre: "Dark Academia",
                image: "https://i.postimg.cc/15mVsXdS/if-we-were-villains.jpg"
            },
             {
                id: 3,
                title: "The Picture of Dorian Gray",
                author: "Oscar Wilde",
-               price: 25
+               price: 25,
+               genre: "Dark Academia"
            },
             {
                id: 4,
                title: "The Secret History",
                author: "Donna Tartt",
-               price: 18
+               price: 18,
+               genre: "Dark Academia"
            },
             {
                id: 5,
                title: "The Song of Achilles",
                author: "Madeline Miller",
                price: 19,
-            //  "image": URL={"https://i.postimg.cc/xCmTfJbj/TSOA.jpg"}
+               genre: "Greek Mythology"
            },
             {
                id: 6,
                title: "Jane Eyre",
                author: "Charlotte Brontë",
-               price: 22
+               price: 22,
+               genre: "Classic"
            },
             {
                id: 7,
                title: "Little Women",
                author: " Louisa May Alcott",
-               price: 22
+               price: 22,
+               genre: "Classic"
            },
             {
                id: 8,
                title: "Shatter Me",
                author: "Taherah Mafi",
-               price: 16
+               price: 16,
+               genre: "Dystopian"
            },
             {
                id: 9,
                title: "The Inheritance Games",
                author: "Jennifer L. Barnes",
-               price: 17
+               price: 17,
+               genre: "Mystery"
            },
             {
                id: 10,
                title: "KillSwitch",
                author: "Penelope Douglas",
-               price: 27
+               price: 27,
+               genre: "Romance"
            },
             {
                id: 11,
                title: "The Maddest Obsession",
                author: "Dannielle Lori",
-               price: 23
+               price: 23,
+               genre: "Romance"
            },
             {
                id: 12,
                title: "Six of Crows",
                author: "Leigh Bardugo",
                price: 24,
-            //    "image": URL={"https://i.postimg.cc/Nf39RtBz/6OC.jpg"}
+               genre: "Fantasy"
            },    
             {
                id: 13,
                title: "La Vie Invisible D'Addie Larue",
                author: "V.E.Schwab",
-               price: 30
+               price: 30,
+               genre: "Fiction"
            },    
             {
                id: 14,
                title: "The Book Thief",
                author: "Markus Zusak",
-               price: 28
+               price: 28,
+               genre: "Classic"
            },    
             {
                id: 15,
                title: "The Atlas Six",
                author: "Olivie Blake",
-               price: 35
+               price: 35,
+               genre: "Dark Academia"
            } 
 ];
 localStorage.setItem('books',JSON.stringify(books))
@@ -108,9 +121,10 @@ x.forEach(aliyah => {
     <td>${aliyah.id}</td>
     <td>${aliyah.title}</td>
     <td>${aliyah.author}</td>
+    <td>${aliyah.genre}</td>
     <td>${aliyah.price}</td>
-    <td><button>edit</button></td>
-    <td><button>delete</button></td>
+    <td><button>edit</button><button>delete</button></td>
+    
    
 </tr>
     
