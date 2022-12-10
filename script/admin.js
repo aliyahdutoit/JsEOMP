@@ -1,3 +1,5 @@
+// let all products display
+
 let books = JSON.parse(localStorage.getItem('books ')) ?
 JSON.parse(localStorage.getItem('books')) : [
             {
@@ -106,31 +108,59 @@ JSON.parse(localStorage.getItem('books')) : [
                author: "Olivie Blake",
                price: 35,
                genre: "Dark Academia"
-           } 
+           } ,
+           {
+            id: 16,
+            title: "Exodus",
+            author: "Kate Stewart",
+            price: 28,
+            genre: "Romance"
+        } 
 ];
 localStorage.setItem('books',JSON.stringify(books))
 let x = JSON.parse(localStorage.getItem('books'));
 console.log(x);
 
-x.forEach(aliyah => {
-    console.log('Title: ' + aliyah.title)
-    document.querySelector("table").innerHTML += 
-    `
-    <tr>
 
-    <td>${aliyah.id}</td>
-    <td>${aliyah.title}</td>
-    <td>${aliyah.author}</td>
-    <td>${aliyah.genre}</td>
-    <td>${aliyah.price}</td>
-    <td><button id="edit">edit</button>
-    <button id="delete">delete</button></td>
+// display function
+
+function displayBooks() {
     
+    x.forEach(aliyah => {
+        console.log('Title: ' + aliyah.title)
+        document.querySelector("table").innerHTML += 
+        `
+        <tr>
     
-   
-</tr>
-    
-            
-    `
-    console.table(aliyah);
-});
+        <td>${aliyah.id}</td>
+        <td>${aliyah.title}</td>
+        <td>${aliyah.author}</td>
+        <td>${aliyah.genre}</td>
+        <td>${aliyah.price}</td>
+        <td><button id="edit">edit</button>
+        <button id="delete" onclick="deleteItem(${aliyah.id})">delete</button></td>
+        
+        
+       
+    </tr>
+        
+                
+        `
+        console.table(aliyah);
+    });
+}
+
+displayBooks();
+
+// delete button
+
+function deleteItem(id) {
+    books.splice(id-1, 1);
+    let i = 1
+    books.forEach(novel => {
+     //use i++
+     sum = i++;
+    });
+    displayBooks();
+}
+

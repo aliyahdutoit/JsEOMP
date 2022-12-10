@@ -83,3 +83,18 @@ body {
 color: blueviolet;
 background-color: black;
   }
+
+.home {
+    padding-left: 540px;
+    padding-top: 100px;
+    border-radius: 100px;
+  }
+
+  #checkoutbody {
+    background-image: url(/assets/checkout-bg.jpg);
+  }
+
+  footer {
+    color: wheat;
+    padding-left: 100px;
+  }

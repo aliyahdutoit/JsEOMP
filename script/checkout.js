@@ -1,3 +1,5 @@
+//display checkout
+
 let books = JSON.parse(localStorage.getItem('books ')) ?
 JSON.parse(localStorage.getItem('books')) : [
             {
@@ -112,52 +114,84 @@ localStorage.setItem('books',JSON.stringify(books))
 let x = JSON.parse(localStorage.getItem('books'));
 console.log(x);
 
-x.forEach(aliyah => {
-    console.log('Title: ' + aliyah.title)
-    document.querySelector("table").innerHTML += 
-    `
-    <tr>
+function displayBooks() {
+  
+  x.forEach(aliyah => {
+      console.log('Title: ' + aliyah.title)
+      document.querySelector("table").innerHTML += 
+      `
+      <tr>
+  
+          <td>${aliyah.id}</td>
+          <td>${aliyah.title}</td>
+          <td>${aliyah.author}</td>
+          <td>${aliyah.genre}</td>
+          <td>${aliyah.price}</td>
+          <td><!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            add to checkout
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">How much Quantity would you like?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputQuantity" class="col-form-label">Quantity</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+             
+              </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="savebutton">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div></td>
+      
+      </tr>
+      
+              
+      `
+      console.table(aliyah);
+  });
+} 
+displayBooks();
 
-        <td>${aliyah.id}</td>
-        <td>${aliyah.title}</td>
-        <td>${aliyah.author}</td>
-        <td>${aliyah.genre}</td>
-        <td>${aliyah.price}</td>
-        <td><!-- Button trigger modal -->
-        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          add to checkout
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">How much Quantity would you like?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-              <div class="row g-3 align-items-center">
-              <div class="col-auto">
-                <label for="inputQuantity" class="col-form-label">Quantity</label>
-              </div>
-              <div class="col-auto">
-                <input type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-              </div>
-           
-            </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="savebutton">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div></td>
-    
-    </tr>
-    
-            
-    `
-    console.table(aliyah);
-});
+//add books to checkout
+// let checkout = JSON.parse(localStorage.getItem ('checkout'));
+
+// function displayCheckout(id) {
+//   console.log(id)
+//   checkout.push(books[id-1])
+//   console.log(checkout)
+//   localStorage.setItem('checkout', JSON.stringify(checkout))
+// }
+
+
+let xp = JSON.parse(localStorage.getItem('checkout'));
+let y = document.querySelector('tbody')
+
+xp.forEach(element => {
+  console.log(element);
+  y.innerHTML +=
+  `
+  <tr>
+  <td>${element.id}</td>
+  <td>${element.name}</td>
+  <td>${element.author}</td>
+  <td>${element.price}</td>
+  <td>${element.quantity}</td>
+ 
+  `
+})

@@ -139,6 +139,15 @@ JSON.parse(localStorage.getItem('books')) : [
                price: 35,
                genre: "Dark Academia",
                image: "https://i.postimg.cc/mk3bfdVy/the-atlas-six.jpg"
+           },
+           {
+               id: 16,
+               title: "Exodus",
+               author: "Kate Stewart",
+               quote: "We love rainy days, don't we, baby?",
+               price: 28,
+               genre: "Romance",
+               image: "https://i.postimg.cc/FsHjxMX3/exodus.jpg"
            } 
 ];
 localStorage.setItem('books',JSON.stringify(books))
@@ -161,7 +170,7 @@ x.forEach(aliyah => {
           <p class="card-text">£${aliyah.price}</p>
           <p class="card-text">"${aliyah.quote}"</p>
           <p class="card-text"><small class="text-muted">by ${aliyah.author}</small>
-          <button>add to checkout</button></p>
+          <button type="button" id="" onclick="addToCart(${aliyah.id})">add to checkout</button></p>
          
         </div>
       </div>
@@ -172,34 +181,13 @@ x.forEach(aliyah => {
     console.log(aliyah);
 });
 
-// for (const aliyah in books)  {
-//     if (books.hasOwnProperty.call(books, aliyah)) {
-//         const element = books[aliyah];
-//         document.querySelector(".card").innerHTML += 
-//         `
-        
-//         <h3>${books.title}</h3>
-        
-//         `
-//     }
+
+//add books to checkout
+// let checkout = JSON.parse(localStorage.getItem ('checkout'));
+
+// function displayCheckout(id) {
+//   console.log(id)
+//   checkout.push(books[id-1])
+//   console.log(checkout)
+//   localStorage.setItem('checkout', JSON.stringify(checkout))
 // }
-
-
-{/* <div class="card mb-3" style="max-width: 540px;">
-<div class="row g-0">
-  <div class="col-md-4">
-    <img src="${aliyah.image}" class="img-fluid rounded-start" alt="..." >
-  </div>
-  <div class="col-md-8">
-    <div class="card-body">
-      <h5 class="card-title">${aliyah.title}</h5>
-      <p class="card-text"><small class="text-muted">${aliyah.genre}</small></p>
-      <p class="card-text">£${aliyah.price}</p>
-      <p class="card-text">"${aliyah.quote}"</p>
-      <p class="card-text"><small class="text-muted">by ${aliyah.author}</small>
-      <button>add to checkout</button></p>
-     
-    </div>
-  </div>
-</div>
-</div> */}

@@ -4,11 +4,20 @@
     font-family: 'Courier New', Courier, monospace;
 }
 body {
-    background-image: url(/assets/home-bg.png);
+    background-image: url(/assets/admin-bg.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     
+}
+
+.nav-link {
+    font-weight: 300px;
+}
+
+h2 {
+    color: aliceblue;
+    padding-left: 650px;
 }
 
 #logo {
@@ -24,7 +33,6 @@ th {
 table {
     justify-content: space-around;
     color: wheat;
-    /* margin-left: 285px; */
     border: 20px;
     column-gap: 20px;
     border-collapse: separate;
@@ -37,4 +45,34 @@ table :hover {
 }
 tbody {
     color: aliceblue;
+}
+
+#delete {
+    background-color: red;
+    color: white;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+#delete:hover {
+    background-color: #000000;
+}
+
+#edit {
+    color: white;
+    background-color: rgb(137, 118, 209);
+    padding: 6px;
+    border-radius: 20px;
+}
+
+#edit:hover {
+    color: #000000;
+    background-color: white;
+}
+
+#addmodal {
+    color: aliceblue;
+    background-color: rgb(1, 87, 1);
+    float: right;
+    margin-right: 115px;
 }
