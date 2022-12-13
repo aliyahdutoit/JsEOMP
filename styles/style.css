@@ -97,4 +97,7 @@ background-color: black;
   footer {
     color: wheat;
     padding-left: 100px;
+    background-color: rgb(25, 3, 3);
+    height: 59px;
+    padding: 20px;
   }
